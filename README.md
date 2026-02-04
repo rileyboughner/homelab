@@ -49,6 +49,7 @@ sudo chmod +x install.sh
 - [x] Frigate
 - [x] Arr stack
 - [x] Proxy
+- [ ] wireguard
 - [ ] Vaultwarden
 - [ ] AI
 - [ ] Code repo
