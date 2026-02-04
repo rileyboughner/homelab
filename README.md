@@ -1,5 +1,5 @@
 # Homelab Overview
-This repo documents my modular server architecture (Docker Compose based) and future plans. It can be used on any server with docker compose installed however using the configuration is highly encouraged.
+This repo documents my modular server architecture (Docker Compose based) and future plans. It can be used on any server with docker compose installed however using the provided nisox configuration is highly encouraged.
 
 ---
 
