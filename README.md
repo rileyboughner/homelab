@@ -3,7 +3,7 @@ This repo documents my modular server architecture (Docker Compose based) and fu
 
 ---
 
-## 📁 File Structure
+## 📁 File Structure 
 | Path | Purpose |
 | --- | --- |
 | `/mnt/tank` | Bulk storage location. |
