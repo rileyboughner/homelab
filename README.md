@@ -18,6 +18,16 @@ This repo documents my modular server architecture (Docker Compose based) and fu
 
 ---
 
+## ✅ Dependencies
+### Current
+- **Docker Compose** (required)
+
+### Planned
+- **Podman** (planned migration)
+- **VM support** (planned for spinning up virtual machines)
+
+---
+
 ## 🧰 Services
 - [x] File syncing
 - [x] Immich
