@@ -1,21 +1,29 @@
-![Project Screenshot](images/screenshot.png)
+# Overview
+This repo contains the docker compose files structure and future plans of my modular server architechture that can be deployed on any linux server but meant to be built upon the server config in my dotfiles.
 
-# Welcome!
+# file structure
+/mnt/tank -- where the bulk files are stored
+/srv/containers -- where docker compose files are stored with the containers config directories
+/srv/data/{user} -- where files are that are mounted using sshfs to other clients eg Documents folder mounted to both laptop and desktop
+/srv/websites -- self explanitory
 
-### there is so much TODO
+# backups !! work in progress !!
 
-- essential services
-- [ ] enable ssh
-- [ ] vpn
-- [ ] reverse proxy
+
+# services
+- [x] file syncing
+- [x] immich
+- [x] home assistant
+- [x] frigate
+- [x] arr stack
 - [ ] vaultwarden
-- [ ] immich
-- [ ] homeassistant
-- [ ] syncthing
-
-- nice to have services
-- [ ] git repo
+- [ ] ai
+- [ ] code repo
+- [ ] container repo
+- [ ] websites
+- [x] proxy
+- [ ] openTime
 - [ ] email
 
-- fun services
 
+![Project Screenshot](images/screenshot.png)
