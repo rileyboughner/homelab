@@ -25,7 +25,7 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 4. Reboot
-5. Profit
+
 
 ---
 
