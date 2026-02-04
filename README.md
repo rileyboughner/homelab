@@ -1,5 +1,5 @@
 # Homelab Overview
-This repo documents my modular server architecture (Docker Compose based) and future plans. It is intended for Linux servers and designed to build on top of my dotfiles-based server configuration.
+This repo documents my modular server architecture (Docker Compose based) and future plans. It can be used on any server with docker compose installed however using the configuration is highly encouraged.
 
 ---
 
