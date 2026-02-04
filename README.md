@@ -12,6 +12,20 @@ This repo documents my modular server architecture (Docker Compose based) and fu
 | `/srv/websites` | Websites and related content. |
 
 ---
+## 🚀 Getting Started
+1. Create a fresh install of [nixos](https://nixos.org/download/)
+2. Clone the Repo
+```bash
+git clone https://github.com/rileyboughner/homelab.git
+```
+3. Run the install script
+```bash
+cd homelab
+sudo chmod +x install 
+./install
+```
+
+---
 
 ## 🔒 Backups
 **Status:** Work in progress.
