@@ -21,8 +21,8 @@ git clone https://github.com/rileyboughner/homelab.git
 3. Run the install script
 ```bash
 cd homelab
-sudo chmod +x install 
-./install
+sudo chmod +x install.sh
+./install.sh
 ```
 
 ---
