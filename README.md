@@ -1,16 +1,20 @@
-# Homelab Overview
-This repo documents my modular server architecture (Docker Compose based) and future plans. It can be used on any server with docker compose installed however using the provided nisox configuration is highly encouraged.
 
----
 
-## 📁 File Structure 
-| Path | Purpose |
-| --- | --- |
-| `/mnt/tank` | Bulk storage location. |
-| `/mnt/tank/config` | Defaut location of Container config files and databases. |
-| `/srv/containers` | Docker Compose files |
-| `/srv/files/{user}` | User data mounted via SSHFS to clients (e.g., Documents shared across laptop/desktop). |
-| `/srv/websites` | Websites and related content. |
+<div align="center">
+  <img src="https://img.shields.io/badge/Servarr-e66001?style=for-the-badge&logo=BitTorrent&logoColor=white" alt="Servarr" />
+  <img src="https://img.shields.io/badge/home%20assistant-%2341BDF5.svg?style=for-the-badge&logo=home-assistant&logoColor=white" alt="Home Assistant" />
+  <img src="https://img.shields.io/badge/vaultwarden-%23175DDC.svg?style=for-the-badge&logo=bitwarden&logoColor=white" alt="Vaultwarden" />
+  <img src="https://img.shields.io/badge/file%20server-18c249?style=for-the-badge&logo=Files&logoColor=white" alt="File Server" />
+  <img src="https://img.shields.io/badge/immich-ed79b5?style=for-the-badge&logo=immich&logoColor=white" alt="Immich" />
+  <img src="https://img.shields.io/badge/Jellyfin-9a5ec0?style=for-the-badge&logo=jellyfin&logoColor=white" alt="Jellyfin" />
+  <img src="https://img.shields.io/badge/frigate-%23000000.svg?style=for-the-badge&logo=frigate&logoColor=white" alt="Frigate" />
+</div>
+
+## Overview
+### What the fuck is a homelab?
+### Features
+- Containers
+- Virtual Machines
 
 ---
 ## 🚀 Getting Started
@@ -27,6 +31,18 @@ sudo chmod +x install.sh
 ```
 4. Reboot
 
+
+---
+
+
+## 📁 File Structure 
+| Path | Purpose |
+| --- | --- |
+| `/mnt/tank` | Bulk storage location. |
+| `/mnt/tank/config` | Defaut location of Container config files and databases. |
+| `/srv/containers` | Docker Compose files |
+| `/srv/files/{user}` | User data mounted via SSHFS to clients (e.g., Documents shared across laptop/desktop). |
+| `/srv/websites` | Websites and related content. |
 
 ---
 
