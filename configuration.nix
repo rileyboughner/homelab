@@ -9,6 +9,11 @@
 
   time.timeZone = "UTC";
 
+  environment.sessionVariables = {
+    TANK_ROOT = "/mnt/tank";
+  };
+
+
   users.users.admin = {
     isNormalUser = true;
     description = "admin";
