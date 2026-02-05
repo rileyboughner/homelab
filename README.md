@@ -1,3 +1,4 @@
+<img width="1200" height="300" alt="WTF Homelab(1)" src="https://github.com/user-attachments/assets/2268c437-7e36-4ed9-8cbe-4311e699d16a" />
 
 
 <div align="center">
