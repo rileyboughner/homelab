@@ -26,40 +26,36 @@ sudo chmod +x install.sh
 ```
 4. Reboot
 
-
----
-
-## 🔒 Backups
-**Status:** Work in progress.
-
----
-
-## ✅ Dependencies
-### Current
-- **Docker Compose** (required)
-
-### Planned
-- **Podman** (planned migration)
-- **VM support** (planned for spinning up virtual machines)
-
 ---
 
 ## 🧰 Services
 - [x] File syncing
-- [x] Immich
 - [x] Home Assistant
+- [x] Immich
 - [x] Frigate
-- [x] Arr stack
 - [x] Proxy
-- [ ] wireguard
+- [x] Arr stack
 - [ ] Vaultwarden
+- [ ] wireguard
 - [ ] AI
-- [ ] Code repo
-- [ ] Container repo
 - [ ] Websites
 - [ ] OpenTime
 - [ ] Email
+- [ ] Code repo
+- [ ] Container repo
 
 ---
 
-![Project Screenshot](.images/screenshot.png)
+##  TODO
+- [ ] complete install script
+    - [ ] figure out env vars
+    - [ ] figure out setting symlinks
+- [ ] create port map
+- [ ] standardize docker compose files
+- [ ] complete test of configuraion.nix
+- [ ] create robust system for backups
+- [ ] create status monitor script
+- [ ] create global env var for config
+- [ ] rethink naming conventions for "TANK_ROOT"
+
+---
