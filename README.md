@@ -12,7 +12,6 @@
 </div>
 
 ## Overview
-### What the fuck is a homelab?
 ### Features
 - Containers
 - Virtual Machines
