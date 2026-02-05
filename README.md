@@ -7,8 +7,9 @@ This repo documents my modular server architecture (Docker Compose based) and fu
 | Path | Purpose |
 | --- | --- |
 | `/mnt/tank` | Bulk storage location. |
-| `/srv/containers` | Docker Compose files and container configuration directories. |
-| `/srv/data/{user}` | User data mounted via SSHFS to clients (e.g., Documents shared across laptop/desktop). |
+| `/mnt/tank/config` | Defaut location of Container config files and databases. |
+| `/srv/containers` | Docker Compose files |
+| `/srv/files/{user}` | User data mounted via SSHFS to clients (e.g., Documents shared across laptop/desktop). |
 | `/srv/websites` | Websites and related content. |
 
 ---
