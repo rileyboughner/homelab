@@ -62,4 +62,4 @@ sudo chmod +x install.sh
 
 ---
 
-![Project Screenshot](images/screenshot.png)
+![Project Screenshot](.images/screenshot.png)
