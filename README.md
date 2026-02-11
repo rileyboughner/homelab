@@ -75,15 +75,16 @@ sudo chmod +x install.sh
 - [ ] Email
 - [ ] Code repo
 - [ ] Container repo
+- [ ] Notifications
 
 ---
 
 ##  TODO
 - [ ] complete install script
-    - [ ] figure out env vars
+    - [x] figure out env vars
     - [ ] figure out setting symlinks
 - [ ] create port map
-- [ ] standardize docker compose files
+- [x] standardize docker compose files
 - [ ] complete test of configuraion.nix
 - [ ] create robust system for backups
 - [ ] create status monitor script
