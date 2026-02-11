@@ -76,6 +76,7 @@ sudo chmod +x install.sh
 - [ ] Code repo
 - [ ] Container repo
 - [ ] Notifications
+- [ ] Authentication
 
 ---
 
