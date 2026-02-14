@@ -73,7 +73,7 @@ sudo chmod +x install.sh
 - [ ] Websites
 - [ ] OpenTime
 - [ ] Email
-- [ ] Code repo
+- [x] Git repo
 - [ ] Container repo
 - [ ] Notifications
 - [ ] Authentication
