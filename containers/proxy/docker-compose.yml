@@ -3,6 +3,8 @@ services:
     image: jc21/nginx-proxy-manager:latest
     container_name: proxy
     restart: unless-stopped
+    networks:
+      - proxy_net
     ports:
       - "81:81"
       - "80:80"
@@ -11,4 +13,6 @@ services:
       - ${TANK_ROOT}/config/proxy-manager/data:/data
       - ${TANK_ROOT}/config/proxy-manager/letsencrypt:/etc/letsencrypt
 
-
+networks:
+  proxy_net:
+    name: proxy_net

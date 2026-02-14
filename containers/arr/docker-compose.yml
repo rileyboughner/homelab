@@ -1,4 +1,6 @@
 networks:
+  arr_net:
+    name: arr_net
   proxy_net:
     external: true
   gluetun:
@@ -55,6 +57,7 @@ services:
     restart: unless-stopped
     networks:
       - gluetun
+      - arr_net
     depends_on:
       - gluetun
 
@@ -74,6 +77,7 @@ services:
     restart: unless-stopped
     networks:
       - gluetun
+      - arr_net
     depends_on:
       - gluetun
 
@@ -93,6 +97,7 @@ services:
     restart: unless-stopped
     networks:
       - gluetun
+      - arr_net
     depends_on:
       - gluetun
 
@@ -112,12 +117,16 @@ services:
     restart: unless-stopped
     networks:
       - gluetun
+      - arr_net
     depends_on:
       - gluetun
 
   jellyseerr:
     image: fallenbagel/jellyseerr:latest
     container_name: jellyseerr
+    networks:
+      - proxy_net
+      - arr_net
     environment:
       - LOG_LEVEL=debug
       - TZ=${TZ}
@@ -130,6 +139,9 @@ services:
   jellyfin:
     image: jellyfin/jellyfin:preview
     container_name: jellyfin
+    networks:
+      - proxy_net
+      - arr_net
     environment:
       - PUID=1000
       - PGID=1000

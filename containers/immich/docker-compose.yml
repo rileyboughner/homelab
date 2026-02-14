@@ -1,7 +1,6 @@
-name: immich
 services:
-  immich-server:
-    container_name: immich_server
+  immich:
+    container_name: immich
     image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION:-release}
     # extends:
     #   file: hwaccel.transcoding.yml
@@ -60,8 +59,3 @@ services:
 
 volumes:
   model-cache:
-
-networks:
-  proxy_net:
-    external: true
-    name: proxy_net

@@ -1,0 +1,14 @@
+services:
+  file-server:
+    image: gtstef/filebrowser:stable
+    container_name: file-server
+    ports:
+      - "8081:80"   # Access via http://192.168.1.2:8081
+    volumes:
+      - /srv/files:/srv
+      - ${TANK_ROOT}/config/filebrowser/database:/database
+    environment:
+      - "FILEBROWSER_CONFIG=data/config.yaml" # using our config file at ./data/config.yaml
+      - PUID=1000        # Adjust to your user id on the host
+      - PGID=1000        # Adjust to your group id
+    restart: unless-stopped
