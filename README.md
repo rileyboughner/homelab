@@ -68,7 +68,7 @@ sudo chmod +x install.sh
 - [x] Proxy
 - [x] Arr stack
 - [x] Vaultwarden
-- [ ] wireguard
+- [x] Dashboard
 - [ ] AI
 - [ ] Websites
 - [ ] OpenTime
@@ -77,6 +77,7 @@ sudo chmod +x install.sh
 - [ ] Container repo
 - [ ] Notifications
 - [ ] Authentication
+- [ ] wireguard
 
 ---
 
