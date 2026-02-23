@@ -10,8 +10,8 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ${TANK_ROOT}/config/proxy-manager/data:/data
-      - ${TANK_ROOT}/config/proxy-manager/letsencrypt:/etc/letsencrypt
+      - ${TANK_ROOT}/config/proxy/data:/data
+      - ${TANK_ROOT}/config/proxy/letsencrypt:/etc/letsencrypt
 
 networks:
   proxy_net:
