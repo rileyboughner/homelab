@@ -60,7 +60,7 @@ sudo chmod +x install.sh
 
 ---
 
-## 🧰 Services
+## 🧰 Docker Services
 - [x] File syncing
 - [x] Home Assistant
 - [x] Immich
@@ -77,17 +77,36 @@ sudo chmod +x install.sh
 - [ ] Container repo
 - [ ] Notifications
 - [ ] Authentication
-- [ ] wireguard
+
+## 🧰 Kubernetes Services
+- [ ] Home Assistant
+- [ ] Immich
+- [ ] Frigate
+- [ ] Proxy
+- [ ] Arr stack
+- [ ] Vaultwarden
+- [ ] Dashboard
+- [ ] AI
+- [ ] Websites
+- [ ] OpenTime
+- [ ] Email
+- [ ] Git repo
+- [ ] Container repo
+- [ ] Notifications
+- [ ] Authentication
 
 ---
 
 ##  TODO
+- [ ] enable auto mount of "/tank/mnt"
+- [ ] create and enable nfs server
+- [ ] migrate from docker to kubernetes
 - [ ] complete install script
     - [x] figure out env vars
     - [ ] figure out setting symlinks
 - [ ] create port map
 - [x] standardize docker compose files
-- [ ] complete test of configuraion.nix
+- [x] complete test of configuraion.nix
 - [ ] create robust system for backups
 - [ ] create status monitor script
 - [ ] create global env var for config
