@@ -38,11 +38,9 @@ sudo chmod +x install.sh
 | Path | Purpose |
 | --- | --- |
 | `/mnt/tank` | Bulk storage location. |
-| `/mnt/tank/config` | Defaut location of Container config files. |
-| `/mnt/tank/data` | Defaut location of Container databases. |
-| `/mnt/tank/<service>` | Defaut location of Container files. |
+| `/mnt/tank/<service>` | Defaut location of Container files. Config and database is stored within|
+| `/mnt/tank/users/<user>` | User data mounted via SSHFS to clients. Migrating to NFS |
 | `/srv/containers` | Docker Compose files |
-| `/srv/files/{user}` | User data mounted via SSHFS to clients. Migrating to NFS |
 | `/srv/websites` | Serving websites like a portfolio. |
 
 ---
