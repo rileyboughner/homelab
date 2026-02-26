@@ -57,6 +57,9 @@ sudo chmod +x install.sh
 ### Planned
 - **Podman** (planned migration)
 - **VM support** (planned for spinning up virtual machines)
+- **Traefik** (planned for reverse proxy and load balancing)
+- **CI/CD** (planned for automated deployments)
+- **Terraform** (planned for infrastructure as code)
 
 ---
 
