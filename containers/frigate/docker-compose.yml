@@ -5,24 +5,17 @@ services:
     privileged: true
     restart: unless-stopped
     shm_size: "64mb"  # Increase to 128mb+ for more cameras
-    networks:
-      - proxy_net
     ports:
-      - "5000:5000"      # http Web UI (unauthenticated)
+     # - "5000:5000"      # http Web UI (unauthenticated)
       - "8971:8971"      # https Web UI
       - "8554:8554"      # RTSP feeds
       - "8555:8555/tcp"  # WebRTC
       - "8555:8555/udp"  # WebRTC
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ${TANK_ROOT}/config/frigate:/config
-      - ${TANK_ROOT}/frigate:/media/frigate
+      - ${SERVICE_DIRECTORY}/frigate/config:/config
+      - ${SERVICE_DIRECTORY}/frigate/media:/media/frigate
       - type: tmpfs
         target: /tmp/cache
         tmpfs:
           size: 1000000000  # 1GB RAM cache
-
-networks:
-  proxy_net:
-    external: true
-    name: proxy_net

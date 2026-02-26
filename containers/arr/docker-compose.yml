@@ -1,8 +1,6 @@
 networks:
   arr_net:
     name: arr_net
-  proxy_net:
-    external: true
   gluetun:
     driver: bridge
 
@@ -37,8 +35,8 @@ services:
       - WEBUI_PORT=8080
       - TORRENTING_PORT=6881
     volumes:
-      - ${TANK_ROOT}/config/qbittorrent:/config
-      - ${TANK_ROOT}/torrents:/torrents
+      - ${SERVICE_DIRECTORY}/qbittorrent:/config
+      - ${MEDIA_DIRECTORY}/torrents:/torrents
     restart: unless-stopped
     depends_on:
       - gluetun
@@ -51,7 +49,7 @@ services:
       - PGID=1000
       - TZ=${TZ}
     volumes:
-      - ${TANK_ROOT}/config/prowlarr:/config
+      - ${SERVICE_DIRECTORY}/prowlarr:/config
     ports:
       - 9696:9696
     restart: unless-stopped
@@ -69,9 +67,9 @@ services:
       - PGID=1000
       - TZ=${TZ}
     volumes:
-      - ${TANK_ROOT}/config/sonarr:/config
-      - ${TANK_ROOT}/media/shows:/shows
-      - ${TANK_ROOT}/torrents:/torrents
+      - ${SERVICE_DIRECTORY}/sonarr:/config
+      - ${MEDIA_DIRECTORY}/shows:/shows
+      - ${SERVICE_DIRECTORY}/torrents:/torrents
     ports:
       - 8989:8989
     restart: unless-stopped
@@ -89,9 +87,9 @@ services:
       - PGID=1000
       - TZ=${TZ}
     volumes:
-      - ${TANK_ROOT}/config/radarr:/config
-      - ${TANK_ROOT}/media/movies:/movies
-      - ${TANK_ROOT}/torrents:/torrents
+      - ${SERVICE_DIRECTORY}/radarr:/config
+      - ${MEDIA_DIRECTORY}/movies:/movies
+      - ${SERVICE_DIRECTORY}/torrents:/torrents
     ports:
       - 7878:7878
     restart: unless-stopped
@@ -109,9 +107,9 @@ services:
       - PGID=1000
       - TZ=${TZ}
     volumes:
-      - ${TANK_ROOT}/config/lidarr:/config
-      - ${TANK_ROOT}/media/music:/music
-      - ${TANK_ROOT}/torrents:/torrents
+      - ${SERVICE_DIRECTORY}/lidarr:/config
+      - ${MEDIA_DIRECTORY}/music:/music
+      - ${SERVICE_DIRECTORY}/torrents:/torrents
     ports:
       - 8686:8686
     restart: unless-stopped
@@ -125,7 +123,6 @@ services:
     image: fallenbagel/jellyseerr:latest
     container_name: jellyseerr
     networks:
-      - proxy_net
       - arr_net
     environment:
       - LOG_LEVEL=debug
@@ -133,23 +130,22 @@ services:
     ports:
       - 5055:5055
     volumes:
-      - ${TANK_ROOT}/config/jellyseer:/app/config
+      - ${SERVICE_DIRECTORY}/jellyseer:/app/config
     restart: unless-stopped
 
   jellyfin:
     image: jellyfin/jellyfin:preview
     container_name: jellyfin
     networks:
-      - proxy_net
       - arr_net
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=${TZ}
     volumes:
-      - ${TANK_ROOT}/config/jellyfin/config:/config
-      - ${TANK_ROOT}/config/jellyfin/cache:/cache
-      - ${TANK_ROOT}/media:/media
+      - ${SERVICE_DIRECTORY}/jellyfin/config:/config
+      #- ${SERVICE_DIRECTORY}/jellyfin/cache:/cache
+      - ${MEDIA_DIRECTORY}:/media
     ports:
       - 8096:8096
       - 8920:8920
