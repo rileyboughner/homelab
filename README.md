@@ -38,13 +38,12 @@ sudo chmod +x install.sh
 | Path | Purpose |
 | --- | --- |
 | `/mnt/tank` | Bulk storage location. |
-| `/mnt/tank/config` | Defaut location of Container config files and databases. |
+| `/mnt/tank/<service>` | Defaut location of Container files. Config and database is stored within|
+| `/mnt/tank/users/<user>` | User data mounted via SSHFS to clients. Migrating to NFS |
 | `/srv/containers` | Docker Compose files |
-| `/srv/files/{user}` | User data mounted via SSHFS to clients (e.g., Documents shared across laptop/desktop). |
-| `/srv/websites` | Websites and related content. |
+| `/srv/websites` | Serving websites like a portfolio. |
 
 ---
-
 ## 🔒 Backups
 **Status:** Work in progress.
 
@@ -55,7 +54,7 @@ sudo chmod +x install.sh
 - **Docker Compose** (required)
 
 ### Planned
-- **Podman** (planned migration)
+- **Kubernetes** (planned migration)
 - **VM support** (planned for spinning up virtual machines)
 - **Traefik** (planned for reverse proxy and load balancing)
 - **CI/CD** (planned for automated deployments)
@@ -63,7 +62,7 @@ sudo chmod +x install.sh
 
 ---
 
-## 🧰 Services
+## 🧰 Docker Services
 - [x] File syncing
 - [x] Home Assistant
 - [x] Immich
@@ -80,17 +79,36 @@ sudo chmod +x install.sh
 - [ ] Container repo
 - [ ] Notifications
 - [ ] Authentication
-- [ ] wireguard
+
+## 🧰 Kubernetes Services
+- [ ] Home Assistant
+- [ ] Immich
+- [ ] Frigate
+- [ ] Proxy
+- [ ] Arr stack
+- [ ] Vaultwarden
+- [ ] Dashboard
+- [ ] AI
+- [ ] Websites
+- [ ] OpenTime
+- [ ] Email
+- [ ] Git repo
+- [ ] Container repo
+- [ ] Notifications
+- [ ] Authentication
 
 ---
 
 ##  TODO
+- [ ] enable auto mount of "/tank/mnt"
+- [ ] create and enable nfs server
+- [ ] migrate from docker to kubernetes
 - [ ] complete install script
     - [x] figure out env vars
     - [ ] figure out setting symlinks
 - [ ] create port map
 - [x] standardize docker compose files
-- [ ] complete test of configuraion.nix
+- [x] complete test of configuraion.nix
 - [ ] create robust system for backups
 - [ ] create status monitor script
 - [ ] create global env var for config
